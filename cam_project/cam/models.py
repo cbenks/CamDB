@@ -15,7 +15,7 @@ class Crypto(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='cryptos')
     name = models.CharField(max_length=50)
-    amount = models.PositiveBigIntegerField(max_length=100)
+    amount = models.PositiveBigIntegerField()
 
     def __str__(self):
         return self.name

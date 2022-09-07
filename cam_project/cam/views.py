@@ -9,3 +9,9 @@ def crypto_list(request):
     cryptos = Crypto.objects.all().values('user', 'name', 'amount')
     cryptos_list = list(cryptos)
     return JsonResponse(cryptos_list, safe=False)
+
+
+def nft_list(request):
+    nfts = Nft.objects.all().values('user', 'name', 'blockchain', 'photo')
+    nfts_list = list(nfts)
+    return JsonResponse(nfts_list, safe=False)

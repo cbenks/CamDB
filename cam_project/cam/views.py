@@ -1,6 +1,7 @@
 from fcntl import F_DUPFD
 from django.shortcuts import render
 from django.http import JsonResponse
+from .models import Crypto, Nft
 
 # Create your views here.
 
